@@ -4,6 +4,8 @@ EXPOSE 3000
 
 ADD . /data
 
+WORKDIR /data
+
 RUN npm install
 
-CMD node app.js
+CMD ["node", "/data/app.js"]
