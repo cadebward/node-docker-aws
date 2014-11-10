@@ -2,7 +2,10 @@ FROM dockerfile/nodejs
 
 EXPOSE 3000
 
-# startup
-ADD start.sh /tmp/  
-RUN chmod +x /tmp/start.sh  
-CMD ./tmp/start.sh
+RUN git clone https://github.com/cadew/node-docker-aws.git /app
+
+WORKDIR /app
+
+RUN npm install
+
+CMD node app.js
