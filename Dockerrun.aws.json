@@ -7,4 +7,5 @@
         { 
             "ContainerPort": "3000"
         }
- 
+    ]
+} 
