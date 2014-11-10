@@ -2,10 +2,7 @@ FROM dockerfile/nodejs
 
 EXPOSE 3000
 
-ADD . /data
-
-WORKDIR /data
-
-RUN npm install
-
-CMD ["node", "/data/app.js"]
+# startup
+ADD start.sh /tmp/  
+RUN chmod +x /tmp/start.sh  
+CMD ./tmp/start.sh
